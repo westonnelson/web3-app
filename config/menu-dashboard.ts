@@ -3,11 +3,11 @@
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 export const menuDashboard = [
   {
-    label: 'Dashboard',
-    href: '/dashboard',
+    label: 'Profile',
+    href: '/profile',
   },
   {
-    label: 'Account',
-    href: '/dashboard/account',
+    label: 'Staking',
+    href: '/profile/staking',
   },
 ]
