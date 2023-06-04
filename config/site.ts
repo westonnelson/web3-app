@@ -14,17 +14,17 @@ interface SiteConfig {
   }
 }
 
-export const SITE_CANONICAL = 'https://turboeth.xyz'
+export const SITE_CANONICAL = 'https://nftearth.exchange'
 
 export const siteConfig: SiteConfig = {
-  name: 'TurboETH',
-  title: 'TurboETH - Web3 App Template',
+  name: 'NFTEarth',
+  title: 'NFTEarth - Trade and Create NFTs on L2',
   emoji: '⚡',
-  description: 'Web3 App Template built using Next.js, RainbowKit, SIWE, Disco, and more!',
+  description: 'NFTs on L2',
   previewImg: `${SITE_CANONICAL}/preview.png`,
   localeDefault: 'en',
   links: {
-    twitter: 'https://twitter.com/district_labs',
-    github: 'https://github.com/turbo-eth',
+    twitter: 'https://twitter.com/NFTEarth_L2',
+    github: 'https://github.com/NFTEarth',
   },
 }
