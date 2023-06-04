@@ -4,7 +4,7 @@
 import { mainnet, arbitrum, polygon, optimism } from '@wagmi/chains'
 import { configureChains } from 'wagmi'
 import { alchemyProvider } from 'wagmi/providers/alchemy'
-import { infuraProvider } from 'wagmi/providers/infura'
+//import { infuraProvider } from 'wagmi/providers/infura'
 import { publicProvider } from 'wagmi/providers/public'
 
 // @ts-ignore
@@ -16,9 +16,9 @@ import { publicProvider } from 'wagmi/providers/public'
 // @ts-ignore
 //baseGoerli.iconUrl = '/icons/NetworkBaseTest.svg'
 
-const CHAINS_SUPPORTED_BY_ALCHEMY = [mainnet, goerli, sepolia, arbitrum, mainnet, optimism, polygon] // TODO add other chains supported by Alchemy
+const CHAINS_SUPPORTED_BY_ALCHEMY = [mainnet, arbitrum, optimism, polygon] // TODO add other chains supported by Alchemy
 //const CHAINS_SUPPORTED_BY_INFURA = [mainnet, goerli, sepolia] // TODO add other chains supported by Infura
-const CHAINS_SUPPORTED_BY_PUBLIC_PROVIDER = [arbitrum, arbitrumGoerli, baseGoerli, goerli, mainnet, optimism, optimismGoerli, polygon, sepolia]
+const CHAINS_SUPPORTED_BY_PUBLIC_PROVIDER = [arbitrum, mainnet, optimism,  polygon]
 //const CHAINS_SUPPORTED_BY_HARDHAT = [hardhat]
 
 const PROVIDERS = []
@@ -33,18 +33,18 @@ if (process.env.NEXT_PUBLIC_ALCHEMY_API_KEY) {
   )
 }
 
-if (process.env.NEXT_PUBLIC_INFURA_API_KEY) {
-  CHAINS.push(...CHAINS_SUPPORTED_BY_INFURA)
-  PROVIDERS.push(
-    infuraProvider({
-      apiKey: process.env.NEXT_PUBLIC_INFURA_API_KEY as string,
-    })
-  )
-}
+//if (process.env.NEXT_PUBLIC_INFURA_API_KEY) {
+ // CHAINS.push(...CHAINS_SUPPORTED_BY_INFURA)
+ // PROVIDERS.push(
+ //   infuraProvider({
+ //     apiKey: process.env.NEXT_PUBLIC_INFURA_API_KEY as string,
+//    })
+//  )
+//}
 
-if (process.env.NEXT_PUBLIC_USE_HARDHAT_PROVIDER) {
-  CHAINS.push(...CHAINS_SUPPORTED_BY_HARDHAT)
-  PROVIDERS.push(publicProvider())
+//if (process.env.NEXT_PUBLIC_USE_HARDHAT_PROVIDER) {
+ // CHAINS.push(...CHAINS_SUPPORTED_BY_HARDHAT)
+//  PROVIDERS.push(publicProvider())
 }
 
 // Include public provider if no other providers are available.
